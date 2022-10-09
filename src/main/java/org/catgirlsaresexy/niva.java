@@ -45,24 +45,7 @@ import java.nio.file.Paths;
 
 
 public class niva {
-
-
-
-
-    private static String generateRandom(String aToZ) {
-        Random rand=new Random();
-        StringBuilder res=new StringBuilder();
-        for (int i = 0; i < 17; i++) {
-            int randIndex=rand.nextInt(aToZ.length());
-            res.append(aToZ.charAt(randIndex));
-        }
-        return res.toString();
-    }
-
     public static void main(String[] args) throws IOException {
-
-        String aToZ="ABCD.....1234"; // 36 letter.
-
 
         Logger logger = LoggerFactory.getLogger(niva.class);
 
@@ -77,6 +60,7 @@ public class niva {
         File theDir = new File("tmp");
         if (!theDir.exists()){
             theDir.mkdirs();
+            logger.info("Created temp folder");
         }
 
 
@@ -89,7 +73,7 @@ public class niva {
         JButton b=new JButton("Get Image");//creating instance of JButton
         JButton b1=new JButton("Open in Explorer");
         b.setBounds(130,100,100, 40);//x axis, y axis, width, height
-        b1.setBounds(150, 120, 100, 40);
+        b1.setBounds(110, 150, 150, 40);
 
         f.add(b);//adding button in JFrame
         f.add(b1);
@@ -121,9 +105,7 @@ public class niva {
 
 
                 try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
-
                     HttpGet httpGet = new HttpGet("https://api.waifu.pics/nsfw/neko");
-
                     try (CloseableHttpResponse response1 = httpclient.execute(httpGet)) {
 
                         logger.info(response1.getCode() + " " + response1.getReasonPhrase());
@@ -138,25 +120,18 @@ public class niva {
                         String imageurl = (String) jo.get("url");
 
 
-
                         String filename = Paths.get(new URI(imageurl).getPath()).getFileName().toString();
 
-                        logger.info(responseString);
+                        //logger.info(responseString);
                         logger.info(imageurl);
                         EntityUtils.consume(entity1);
 
-
-                        String randomStr=generateRandom(aToZ);
 
                         try(InputStream in = new URL(imageurl).openStream()){
                             Files.copy(in, Paths.get("tmp/" + filename));
                         }
 
-
-
-
                     } catch (ParseException ex) {
-
                         Sentry.captureException(ex);
                         throw new RuntimeException(ex);
                     } catch (org.json.simple.parser.ParseException ex) {
@@ -166,7 +141,6 @@ public class niva {
                         Sentry.captureException(ex);
                         throw new RuntimeException(ex);
                     }
-
 
                 } catch (IOException ex) {
                     Sentry.captureException(ex);
