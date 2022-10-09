@@ -1,0 +1,29 @@
+2022-10-09 09:10:47 INFO  niva:69 - Initialized Sentry
+  2022-10-09 09:10:47 INFO  niva:70 - Logging to ./niva.log
+  2022-10-09 09:10:50 INFO  niva:104 - 200 OK
+  2022-10-09 09:10:50 INFO  niva:115 - {"url":"https://i.waifu.pics/xJgbHho.jpg"}
+
+  2022-10-09 09:10:50 INFO  niva:116 - https://i.waifu.pics/xJgbHho.jpg
+  2022-10-09 09:11:11 INFO  niva:104 - 200 OK
+  2022-10-09 09:11:11 INFO  niva:115 - {"url":"https://i.waifu.pics/lbibMPG.jpg"}
+
+  2022-10-09 09:11:11 INFO  niva:116 - https://i.waifu.pics/lbibMPG.jpg
+  2022-10-09 09:11:23 INFO  niva:104 - 200 OK
+  2022-10-09 09:11:23 INFO  niva:115 - {"url":"https://i.waifu.pics/_PeZrR5.png"}
+
+  2022-10-09 09:11:23 INFO  niva:116 - https://i.waifu.pics/_PeZrR5.png
+  2022-10-09 09:19:14 INFO  niva:74 - Initialized Sentry
+  2022-10-09 09:19:14 INFO  niva:75 - Logging to ./niva.log
+  2022-10-09 09:19:25 INFO  niva:109 - 200 OK
+  2022-10-09 09:19:25 INFO  niva:124 - {"url":"https://i.waifu.pics/7g5cd0l.png"}
+
+  2022-10-09 09:19:25 INFO  niva:125 - https://i.waifu.pics/7g5cd0l.png
+  2022-10-09 09:19:32 INFO  niva:109 - 200 OK
+  2022-10-09 09:19:32 INFO  niva:124 - {"url":"https://i.waifu.pics/KfW_U4w.png"}
+
+  2022-10-09 09:19:32 INFO  niva:125 - https://i.waifu.pics/KfW_U4w.png
+  2022-10-09 09:19:43 INFO  niva:109 - 200 OK
+  2022-10-09 09:19:43 INFO  niva:124 - {"url":"https://i.waifu.pics/AyH2crB.jpg"}
+
+  2022-10-09 09:19:43 INFO  niva:125 - https://i.waifu.pics/AyH2crB.jpg
+  
